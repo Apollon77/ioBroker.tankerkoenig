@@ -85,28 +85,28 @@ function readData(url) {
                     // Reset
                     if (adapter.config.resetValues) {
                         // billigstes E5
-                        adapter.setState('stations.cheapest.e5.feed',  0);
-                        adapter.setState('stations.cheapest.e5.short', '');
-                        adapter.setState('stations.cheapest.e5.3rd',   0);// dritte stelle
+                        adapter.setState('stations.cheapest.e5.feed', null);
+                        adapter.setState('stations.cheapest.e5.short', null);
+                        adapter.setState('stations.cheapest.e5.3rd', null);// dritte stelle
                         adapter.setState('stations.cheapest.e5.combined', 'keine Daten');
-                        adapter.setState('stations.cheapest.e5.name', '');
-                        adapter.setState('stations.cheapest.e5.status', '');
+                        adapter.setState('stations.cheapest.e5.name', null);
+                        adapter.setState('stations.cheapest.e5.status', null);
 
                         // billigstes E10
-                        adapter.setState('stations.cheapest.e10.feed',  0);
-                        adapter.setState('stations.cheapest.e10.short', '0');
-                        adapter.setState('stations.cheapest.e10.3rd',   0);
+                        adapter.setState('stations.cheapest.e10.feed', null);
+                        adapter.setState('stations.cheapest.e10.short', null);
+                        adapter.setState('stations.cheapest.e10.3rd', null);
                         adapter.setState('stations.cheapest.e10.combined', 'keine Daten');
-                        adapter.setState('stations.cheapest.e10.name', '');
-                        adapter.setState('stations.cheapest.e10.status', '');
+                        adapter.setState('stations.cheapest.e10.name', null);
+                        adapter.setState('stations.cheapest.e10.status', null);
 
                         // billigster Diesel
-                        adapter.setState('stations.cheapest.diesel.feed',  0);
-                        adapter.setState('stations.cheapest.diesel.short', '0');// zweistellig
-                        adapter.setState('stations.cheapest.diesel.3rd',   0);// dritte stelle
+                        adapter.setState('stations.cheapest.diesel.feed', null);
+                        adapter.setState('stations.cheapest.diesel.short', null);// zweistellig
+                        adapter.setState('stations.cheapest.diesel.3rd', null);// dritte stelle
                         adapter.setState('stations.cheapest.diesel.combined', 'keine Daten');
-                        adapter.setState('stations.cheapest.diesel.name', '');
-                        adapter.setState('stations.cheapest.diesel.status', '');
+                        adapter.setState('stations.cheapest.diesel.name', null);
+                        adapter.setState('stations.cheapest.diesel.status', null);
                     }
 
 
@@ -118,17 +118,17 @@ function readData(url) {
                         // hier alle States für Status und Preise leeren (0.00 oder 0), falls nicht alle 10 Felder ausgefüllt sind (ohne ack true)
                         if (adapter.config.resetValues) { // Zeile testweise eingefügt
                         adapter.setState('stations.' + i + '.status',      '');
-                        adapter.setState('stations.' + i + '.e5.feed',      0);
-                        adapter.setState('stations.' + i + '.e5.short',     0);
-                        adapter.setState('stations.' + i + '.e5.3rd',       0);
+                        adapter.setState('stations.' + i + '.e5.feed',      null);
+                        adapter.setState('stations.' + i + '.e5.short',     null);
+                        adapter.setState('stations.' + i + '.e5.3rd',       null);
                         adapter.setState('stations.' + i + '.e5.combined', "");
-                        adapter.setState('stations.' + i + '.e10.feed',     0);
-                        adapter.setState('stations.' + i + '.e10.short',    0);
-                        adapter.setState('stations.' + i + '.e10.3rd',      0);
+                        adapter.setState('stations.' + i + '.e10.feed',     null);
+                        adapter.setState('stations.' + i + '.e10.short',    null);
+                        adapter.setState('stations.' + i + '.e10.3rd',      null);
                         adapter.setState('stations.' + i + '.e10.combined', "");
-                        adapter.setState('stations.' + i + '.diesel.feed',  0);
-                        adapter.setState('stations.' + i + '.diesel.short', 0);
-                        adapter.setState('stations.' + i + '.diesel.3rd',   0);
+                        adapter.setState('stations.' + i + '.diesel.feed',  null);
+                        adapter.setState('stations.' + i + '.diesel.short', null);
+                        adapter.setState('stations.' + i + '.diesel.3rd',   null);
                         adapter.setState('stations.' + i + '.diesel.combined', "");
                         } // Zeile testweise eingefügt
                         if (stationid.length == 36) { // wenn StationID bekannt, also Settings-Feld gefüllt
